@@ -23,6 +23,7 @@ import java.util.List;
  */
 public class FilterColumns {
 
+    
     /**
      * problem 1: Write the SQL statement in the problem1.sql file to return only the 'firstname' column from the
      * site_user table
@@ -38,8 +39,10 @@ public class FilterColumns {
      */
 
     public List<User> problem1(){
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
+    
+    //    String sql = FileUtil.parseSQLFile("problem1.sql");
+        String sql = "SELECT firstname FROM site_user; ";
+        
         List<User> users = new ArrayList<>();
         try {
             Connection connection = ConnectionUtil.getConnection();
